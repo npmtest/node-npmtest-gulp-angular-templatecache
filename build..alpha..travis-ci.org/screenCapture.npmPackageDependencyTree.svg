@@ -57,7 +57,7 @@
 <tspan x="10" y="874">  │ │   │ └── signal-exit@3.0.2 </tspan>
 <tspan x="10" y="890">  │ │   ├── map-obj@1.0.1 </tspan>
 <tspan x="10" y="906">  │ │   ├─┬ normalize-package-data@2.3.6 </tspan>
-<tspan x="10" y="922">  │ │   │ ├── hosted-git-info@2.4.1 </tspan>
+<tspan x="10" y="922">  │ │   │ ├── hosted-git-info@2.4.2 </tspan>
 <tspan x="10" y="938">  │ │   │ ├─┬ is-builtin-module@1.0.0 </tspan>
 <tspan x="10" y="954">  │ │   │ │ └── builtin-modules@1.1.1 </tspan>
 <tspan x="10" y="970">  │ │   │ ├── semver@5.3.0 </tspan>

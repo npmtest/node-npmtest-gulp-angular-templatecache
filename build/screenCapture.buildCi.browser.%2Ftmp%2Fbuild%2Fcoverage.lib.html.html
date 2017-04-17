@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-gulp-angular-templatecache/gulp-angular-templatecache/index.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-gulp-angular-templatecache/node_modules/gulp-angular-templatecache/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-gulp-angular-templatecache">npmtest-gulp-angular-templatecache (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-gulp-angular-templatecache/gulp-angular-templatecache/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-gulp-angular-templatecache/node_modules/gulp-angular-templatecache/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">34.62% <small>(18 / 52)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-gulp-angular-templatecache/gulp-angular-templatecache/</a> &#187; index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-gulp-angular-templatecache/node_modules/gulp-angular-templatecache/</a> » index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -660,57 +658,57 @@ var MODULE_TEMPLATES = {
  * Add files to templateCache.
  */
 &nbsp;
-<span class="fstat-no" title="function not covered" >function templateCacheFiles(root, base, templateBody, transformUrl) {</span>
+<span class="fstat-no" title="function not covered">function templateCacheFiles(root, base, templateBody, transformUrl) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return <span class="fstat-no" title="function not covered" >function templateCacheFile(file, callback) {</span></span>
-<span class="cstat-no" title="statement not covered" >    if (file.processedByTemplateCache) {</span>
-<span class="cstat-no" title="statement not covered" >      return callback(null, file);</span>
+<span class="cstat-no" title="statement not covered">  return <span class="fstat-no" title="function not covered">function templateCacheFile(file, callback) {</span></span>
+<span class="cstat-no" title="statement not covered">    if (file.processedByTemplateCache) {</span>
+<span class="cstat-no" title="statement not covered">      return callback(null, file);</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var template = templateBody || TEMPLATE_BODY;</span>
-<span class="cstat-no" title="statement not covered" >    var url;</span>
+<span class="cstat-no" title="statement not covered">    var template = templateBody || TEMPLATE_BODY;</span>
+<span class="cstat-no" title="statement not covered">    var url;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    file.path = path.normalize(file.path);</span>
+<span class="cstat-no" title="statement not covered">    file.path = path.normalize(file.path);</span>
 &nbsp;
     /**
      * Rewrite url
      */
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (typeof base === 'function') {</span>
-<span class="cstat-no" title="statement not covered" >      url = path.join(root, base(file));</span>
+<span class="cstat-no" title="statement not covered">    if (typeof base === 'function') {</span>
+<span class="cstat-no" title="statement not covered">      url = path.join(root, base(file));</span>
     } else {
-<span class="cstat-no" title="statement not covered" >      url = path.join(root, file.path.replace(base || file.base, ''));</span>
+<span class="cstat-no" title="statement not covered">      url = path.join(root, file.path.replace(base || file.base, ''));</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (root === '.' || root.indexOf('./') === 0) {</span>
-<span class="cstat-no" title="statement not covered" >      url = './' + url;</span>
+<span class="cstat-no" title="statement not covered">    if (root === '.' || root.indexOf('./') === 0) {</span>
+<span class="cstat-no" title="statement not covered">      url = './' + url;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (typeof transformUrl === 'function') {</span>
-<span class="cstat-no" title="statement not covered" >      url = transformUrl(url);</span>
+<span class="cstat-no" title="statement not covered">    if (typeof transformUrl === 'function') {</span>
+<span class="cstat-no" title="statement not covered">      url = transformUrl(url);</span>
     }
 &nbsp;
     /**
      * Normalize url (win only)
      */
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (process.platform === 'win32') {</span>
-<span class="cstat-no" title="statement not covered" >      url = url.replace(/\\/g, '/');</span>
+<span class="cstat-no" title="statement not covered">    if (process.platform === 'win32') {</span>
+<span class="cstat-no" title="statement not covered">      url = url.replace(/\\/g, '/');</span>
     }
 &nbsp;
     /**
      * Create buffer
      */
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    file.contents = new Buffer(gutil.template(template, {</span>
+<span class="cstat-no" title="statement not covered">    file.contents = new Buffer(gutil.template(template, {</span>
       url: url,
       contents: jsesc(file.contents.toString('utf8')),
       file: file
     }));
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    file.processedByTemplateCache = true;</span>
+<span class="cstat-no" title="statement not covered">    file.processedByTemplateCache = true;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    callback(null, file);</span>
+<span class="cstat-no" title="statement not covered">    callback(null, file);</span>
 &nbsp;
   };
 &nbsp;
@@ -720,21 +718,21 @@ var MODULE_TEMPLATES = {
  * templateCache a stream of files.
  */
 &nbsp;
-<span class="fstat-no" title="function not covered" >function templateCacheStream(root, base, templateBody, transformUrl) {</span>
+<span class="fstat-no" title="function not covered">function templateCacheStream(root, base, templateBody, transformUrl) {</span>
 &nbsp;
   /**
    * Set relative base
    */
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (typeof base !== 'function' &amp;&amp; base &amp;&amp; base.substr(-1) !== path.sep) {</span>
-<span class="cstat-no" title="statement not covered" >    base += path.sep;</span>
+<span class="cstat-no" title="statement not covered">  if (typeof base !== 'function' &amp;&amp; base &amp;&amp; base.substr(-1) !== path.sep) {</span>
+<span class="cstat-no" title="statement not covered">    base += path.sep;</span>
   }
 &nbsp;
   /**
    * templateCache files
    */
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return es.map(templateCacheFiles(root, base, templateBody, transformUrl));</span>
+<span class="cstat-no" title="statement not covered">  return es.map(templateCacheFiles(root, base, templateBody, transformUrl));</span>
 &nbsp;
 }
 &nbsp;
@@ -742,14 +740,14 @@ var MODULE_TEMPLATES = {
  * Wrap templateCache with module system template.
  */
 &nbsp;
-<span class="fstat-no" title="function not covered" >function wrapInModule(moduleSystem) {</span>
-<span class="cstat-no" title="statement not covered" >  var moduleTemplate = MODULE_TEMPLATES[moduleSystem];</span>
+<span class="fstat-no" title="function not covered">function wrapInModule(moduleSystem) {</span>
+<span class="cstat-no" title="statement not covered">  var moduleTemplate = MODULE_TEMPLATES[moduleSystem];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!moduleTemplate) {</span>
-<span class="cstat-no" title="statement not covered" >    return gutil.noop();</span>
+<span class="cstat-no" title="statement not covered">  if (!moduleTemplate) {</span>
+<span class="cstat-no" title="statement not covered">    return gutil.noop();</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return es.pipeline(</span>
+<span class="cstat-no" title="statement not covered">  return es.pipeline(</span>
     header(moduleTemplate.header || ''),
     footer(moduleTemplate.footer || '')
   );
@@ -763,39 +761,39 @@ var MODULE_TEMPLATES = {
  * @param {object} [options]
  */
 &nbsp;
-<span class="fstat-no" title="function not covered" >function templateCache(filename, options) {</span>
+<span class="fstat-no" title="function not covered">function templateCache(filename, options) {</span>
 &nbsp;
   /**
    * Prepare options
    */
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (typeof filename === 'string') {</span>
-<span class="cstat-no" title="statement not covered" >    options = options || {};</span>
+<span class="cstat-no" title="statement not covered">  if (typeof filename === 'string') {</span>
+<span class="cstat-no" title="statement not covered">    options = options || {};</span>
   } else {
-<span class="cstat-no" title="statement not covered" >    options = filename || {};</span>
-<span class="cstat-no" title="statement not covered" >    filename = options.filename || DEFAULT_FILENAME;</span>
+<span class="cstat-no" title="statement not covered">    options = filename || {};</span>
+<span class="cstat-no" title="statement not covered">    filename = options.filename || DEFAULT_FILENAME;</span>
   }
 &nbsp;
   /**
    * Normalize moduleSystem option
    */
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (options.moduleSystem) {</span>
-<span class="cstat-no" title="statement not covered" >    options.moduleSystem = options.moduleSystem.toLowerCase();</span>
+<span class="cstat-no" title="statement not covered">  if (options.moduleSystem) {</span>
+<span class="cstat-no" title="statement not covered">    options.moduleSystem = options.moduleSystem.toLowerCase();</span>
   }
 &nbsp;
   /**
    * Prepare header / footer
    */
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var templateHeader = options.templateHeader || TEMPLATE_HEADER;</span>
-<span class="cstat-no" title="statement not covered" >  var templateFooter = options.templateFooter || TEMPLATE_FOOTER;</span>
+<span class="cstat-no" title="statement not covered">  var templateHeader = options.templateHeader || TEMPLATE_HEADER;</span>
+<span class="cstat-no" title="statement not covered">  var templateFooter = options.templateFooter || TEMPLATE_FOOTER;</span>
 &nbsp;
   /**
    * Build templateCache
    */
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return es.pipeline(</span>
+<span class="cstat-no" title="statement not covered">  return es.pipeline(</span>
     templateCacheStream(options.root || '', options.base, options.templateBody, options.transformUrl),
     concat(filename),
     header(templateHeader, {
@@ -818,10 +816,11 @@ var MODULE_TEMPLATES = {
 module.exports = templateCache;
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 08:51:18 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Mon Apr 17 2017 15:55:19 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>

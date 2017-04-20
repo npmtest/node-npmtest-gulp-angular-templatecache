@@ -1,4 +1,7 @@
-# test coverage for  [gulp-angular-templatecache (v2.0.0)](https://github.com/miickel/gulp-angular-templatecache#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-gulp-angular-templatecache.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-gulp-angular-templatecache) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-gulp-angular-templatecache.svg)](https://travis-ci.org/npmtest/node-npmtest-gulp-angular-templatecache)
+# npmtest-gulp-angular-templatecache
+
+#### basic test coverage for  [gulp-angular-templatecache (v2.0.0)](https://github.com/miickel/gulp-angular-templatecache#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-gulp-angular-templatecache.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-gulp-angular-templatecache) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-gulp-angular-templatecache.svg)](https://travis-ci.org/npmtest/node-npmtest-gulp-angular-templatecache)
+
 #### Concatenates and registers AngularJS templates in the $templateCache.
 
 [![NPM](https://nodei.co/npm/gulp-angular-templatecache.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/gulp-angular-templatecache)
